@@ -1,5 +1,2 @@
-TrainingServer/linux-x64/TrainingServer filter=lfs diff=lfs merge=lfs -text
-TrainingServer/linux-arm64/TrainingServer filter=lfs diff=lfs merge=lfs -text
-TrainingServer/win-x64/TrainingServer.exe filter=lfs diff=lfs merge=lfs -text
 . !text !filter !merge !diff
 TrainingServer !text !filter !merge !diff
