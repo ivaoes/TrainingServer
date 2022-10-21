@@ -20,7 +20,7 @@ public class Plugin: IPlugin {
     public Plugin() {
 
         string[] regexes = new [] {
-            @ "ILS\s(?<lat>[+-]?\d+(\.\d+)?)[ /;](?<lon>[+-]?\d+(\.\d+)?);?\s*(?<hdg>\d+(.\d+)?)",
+            @"ILS\s(?<lat>[+-]?\d+(\.\d+)?)[ /;](?<lon>[+-]?\d+(\.\d+)?);?\s*(?<hdg>\d+(.\d+)?)",
         };
 
         _ils = new(regexes[0], RegexOptions.IgnoreCase);
@@ -45,7 +45,7 @@ public class Plugin: IPlugin {
 
         this.integral_error += error * DIST_STEP;
         double derivative_error = (error - error_last) / DIST_STEP;
-        double output = this.kp * error + this.ki * integral_error + this.kd * derivative_error;
+        double output = kp * error + ki * integral_error + kd * derivative_error;
         this.error_last = error;
 
         return output;
