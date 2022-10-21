@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "ILS": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "E:\\02. Projects\\TrainingServer\\TrainingServer\\win-x64\\TrainingServer.exe",
+      "workingDirectory": "E:\\02. Projects\\TrainingServer\\TrainingServer\\win-x64",
+      "nativeDebugging": true
+    }
+  }
+}
