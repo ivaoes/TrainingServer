@@ -165,9 +165,8 @@ public class Plugin: IPlugin {
 
         }
 
-        for (int i = 0; i < points.Count; i++)
-        {
 
+        for (int i = 1; i < points.Count; i++) // i starts in 1 to avoid first point at acft position
             aircraft.FlyDirect(new() {
                 Latitude = points[i].Item1, Longitude = points[i].Item2
             });
