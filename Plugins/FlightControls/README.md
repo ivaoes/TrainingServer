@@ -27,6 +27,7 @@ C [FL]: climb
 D [FL]: descend
 ```
 By adding AFTER before the command, the aircraft will complete previous instruction first.
+
 For example in the command sequence:
 ```DCT TOBEK
 AFTER D 050
@@ -40,6 +41,7 @@ HOLD [{RIGHT/LEFT}] [INBOUND COURSE] [FIX]: holding
 Example command: `HOLD RIGHT 047 TOBEK`
 
 Note: if you are not using Niko's FixRewriter plugin, FIX parameter must be given in the following format: lat/lon. Example: 41.232/-2.343
+
 Note 2: if you are using Niko's FixRewriter plugin, you can save holdings to speed up the process. Example:
 By adding `TOBEKHOLD RIGHT 047 40.19615545/-3.42444695` to your `fixes.fix` configuration file, you can now instruct a traffic to the standard holding over TOBEK by sending `HOLD TOBEKHOLD`
 
