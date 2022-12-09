@@ -4,7 +4,9 @@ This plugin allows to instruct basic movements to an aircraft (climb, descend, f
 
 # Commands
 () -> optional parameter
+
 [] -> obligatory parameter
+
 {OPTION1/OPTION2} -> one of the following options must be used
 
 ## Heading commands:
@@ -72,5 +74,6 @@ SQK [SQUAWK]: squawk
 ```
 DIE: kills the aircraft
 ```
+
 
 Maintainer: 605126
