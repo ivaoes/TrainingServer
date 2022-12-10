@@ -11,4 +11,8 @@
       <HintPath>..\..\TrainingServer.Extensibility\TrainingServer.Extensibility.dll</HintPath>
     </Reference>
   </ItemGroup>
+  
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(OutDir)$(AssemblyName).dll $(ProjectDir)" />
+  </Target>
 </Project>
