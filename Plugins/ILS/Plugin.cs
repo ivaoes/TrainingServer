@@ -37,9 +37,6 @@ public class Plugin : IPlugin
     private const double Ki = 0.1;
     private const double Kd = 0.05;
 
-
-
-
     private static double Controller(double pos, Runway runway)
     {
         var error = pos - runway.runway_course;
@@ -213,14 +210,11 @@ public class Plugin : IPlugin
                     runway.RunwayThreshold) * 6076 * Math.Tan(runway.slope))) < (100 + runway.aircraft.Altitude))
             {
                 gs_trigger = true;
-                Console.WriteLine("DESCENDING");
             }
 
             // Actualy descend if on gs
             if (gs_trigger)
             {
-                Console.WriteLine(runway.aircraft.GroundSpeed);
-                Console.WriteLine((uint)((uint)runway.aircraft.GroundSpeed* 101.3 * Math.Tan(runway.slope)));
                 runway.aircraft.RestrictAltitude((int)runway.aptalt, (int)runway.aptalt, (uint)((uint)runway.aircraft.GroundSpeed * 101.3
                     * Math.Tan(runway.slope)));
             }
