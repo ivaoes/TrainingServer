@@ -1,6 +1,6 @@
 # ILS (LOC only)
 
-This plugins simulates using PID controll (with a ficticious plant) the aircarft joining the localizer of the ILS.
+This plugin simulates using PID control (with a fictitious plant) the aircraft joining the localizer of the ILS.
 
 Command and data must be in the following form:
 ```

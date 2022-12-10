@@ -54,12 +54,10 @@ public class Plugin : IPlugin
             runway.turn_toggle = true;
             return output + runway.aircraft.TrueCourse;
         }
-        else
-        {
-            // Fix integral wind up
-            runway.integralError = 10;
-            return runway.aircraft.TrueCourse;
-        }
+        // Fix integral wind up
+        runway.integralError = 10;
+        return runway.aircraft.TrueCourse;
+    
  
     }
 
@@ -81,7 +79,7 @@ public class Plugin : IPlugin
 
     private static double Distancenm(Coordinate point1, Coordinate point2)
     {
-        double R = 3443.92; // Earth radius in nm
+        const double R = 3443.92; // Earth radius in nm
 
         double phi1 = point1.Latitude * Math.PI / 180;
         double phi2 = point2.Latitude * Math.PI / 180;
