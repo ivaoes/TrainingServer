@@ -28,13 +28,7 @@ A [FL]: altitude
 C [FL]: climb
 D [FL]: descend
 ```
-By adding AFTER before the command, the aircraft will complete previous instruction first.
-
-For example in the command sequence:
-```DCT TOBEK
-AFTER D 050
-```
-The aircraft won't start descending to 5000ft until it has reached TOBEK.
+By adding EX before the command, the aircraft will expedite descent/climb.
 
 ## Holding
 ```
@@ -59,6 +53,7 @@ AFTER DCT NVS
 The aircraft won't start flying to NVS until it has reached TOBEK.
 
 Note: if you are not using Niko's FixRewriter plugin, FIX parameter must be given in the following format: lat/lon. Example: 41.232/-2.343
+Note 2: due to a current server limitation, traffics **will not descend/climb or reduce their speed until they have reached given point**
 
 ## Speed control
 ```
